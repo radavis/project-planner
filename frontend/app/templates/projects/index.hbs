@@ -1,6 +1,7 @@
-<h1>Projects</h1>
+<h3>Projects</h3>
 
-{{#each project in model}}
-  <h3>{{project.name}}</h3>
-  <p>{{project.description}}</p>
-{{/each}}
+<ul>
+  {{#each project in model}}
+    <li>{{link-to project.name 'projects.show' project}}</li>
+  {{/each}}
+</ul>
